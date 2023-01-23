@@ -1,11 +1,11 @@
-# purpurmc-docker
+# purpurmc-docker for arm64
 Very basic, unofficial docker image for [purpurmc](https://purpurmc.org/).
 
 ## Usage Example
 ```
-docker run -v "/host/purpur:/opt/purpur" -e EULA=true -e UPDATE=true -e MEMORY=2G ghcr.io/n0r1uno/purpurmc-docker
+docker run -v "/host/purpur:/opt/purpur" -e EULA=true -e UPDATE=true -e MEMORY=2G ghcr.io/elraro/purpurmc-docker
 ```
-- default version is 1.18.2
+- default version is 1.19.3
 - `EULA=true` is required
 - `UPDATE=true` always downloads the latest purpurmc build on startup
 - root user not recommended, see below
@@ -22,15 +22,15 @@ docker run -v "/host/purpur:/opt/purpur" -e EULA=true -e UPDATE=true -e MEMORY=2
  version: '3.8'
 
 services:
-  purpurmc-1-18-2:
-    image: ghcr.io/n0r1uno/purpurmc-docker
+  purpurmc:
+    image: ghcr.io/elraro/purpurmc-docker
     environment:
       - EULA=true
       - GID=1003
       - UID=1003
-      - VERSION=1.18.2
+      - VERSION=1.19.3
       - UPDATE=true
-      - MEMORY=2G
+      - MEMORY=8G
     volumes:
       - /opt/purpur/:/opt/purpur/
     ports:
