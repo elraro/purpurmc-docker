@@ -1,4 +1,4 @@
-FROM eclipse-temurin:eclipse-temurin:20-jre
+FROM eclipse-temurin:20-jre
 WORKDIR /opt/
 RUN apt-get update && apt-get install -y wget && apt-get clean
 COPY setup.sh /opt/
