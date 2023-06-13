@@ -5,7 +5,7 @@ Very basic, unofficial docker image for [purpurmc](https://purpurmc.org/).
 ```
 docker run -v "/host/purpur:/opt/purpur" -e EULA=true -e UPDATE=true -e MEMORY=2G ghcr.io/elraro/purpurmc-docker
 ```
-- default version is 1.19.3
+- default version is 1.20
 - `EULA=true` is required
 - `UPDATE=true` always downloads the latest purpurmc build on startup
 - root user not recommended, see below
@@ -28,7 +28,7 @@ services:
       - EULA=true
       - GID=1003
       - UID=1003
-      - VERSION=1.19.3
+      - VERSION=1.20
       - UPDATE=true
       - MEMORY=8G
     volumes:
